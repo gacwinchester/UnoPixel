@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">UnoProject</string>
+    <string name="btnPlay">Press Start</string>
+    <string name="btnQuit">Quit</string>
+</resources>
