@@ -24,7 +24,8 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="landscape" />
-        <activity android:name=".end_game"></activity>
+        <activity android:name=".LoseGame" />
+        <activity android:name=".WinGame"></activity>
     </application>
 
 </manifest>
