@@ -7,11 +7,11 @@ import android.widget.ImageView;
 
 public class CardHolder extends RecyclerView.ViewHolder {
 
-    public ImageView moreButton;
+    public ImageView carta;
 
     public CardHolder(View itemView) {
         super(itemView);
-        moreButton = (ImageView) itemView.findViewById(R.id.img_carta);
+        carta = (ImageView) itemView.findViewById(R.id.img_carta);
     }
 
 }

@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import java.util.ArrayList;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class StartScreen extends AppCompatActivity {
 
@@ -19,13 +20,10 @@ public class StartScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_screen);
-
-        songs.add(R.raw.megaman);
-
-        // criar metodo random que escolhe a musica de fundo
-
+        int qtSongs = 0;
+        songs.add(R.raw.megaman);//Adicionar as musicas a lista
         soundtrack.stop();
-        soundtrack = MediaPlayer.create(StartScreen.this, songs.get(0));
+        soundtrack = MediaPlayer.create(StartScreen.this, songs.get(ThreadLocalRandom.current().nextInt(0, qtSongs + 1)));
         soundtrack.start();
         soundtrack.setLooping(true);
 
@@ -44,4 +42,15 @@ public class StartScreen extends AppCompatActivity {
         }, 4000);
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        soundtrack.pause();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        soundtrack.start();
+    }
 }
