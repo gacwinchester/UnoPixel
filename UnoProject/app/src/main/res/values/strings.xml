@@ -2,4 +2,5 @@
     <string name="app_name">UnoProject</string>
     <string name="btnPlay">Press Start</string>
     <string name="btnQuit">Quit</string>
+    <string name="carta_description">Carta do jogo</string>
 </resources>
